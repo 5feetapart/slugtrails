@@ -8,21 +8,15 @@
 	import SignIn from '$lib/SignIn.svelte'
 </script>
 
-{#if $userData === null}
-	<SignIn />
-{:else if $userData === undefined}
-	<code>loading...</code>
-{:else}
-	<Slug />
+<Slug />
 
-	<div class="wrapper">
-		<button>Journal</button>
+<div class="wrapper">
+	<button>Journal</button>
 
-		<Favorites />
+	<Favorites />
 
-		<Stats />
-	</div>
-{/if}
+	<Stats />
+</div>
 
 <style>
 	button {

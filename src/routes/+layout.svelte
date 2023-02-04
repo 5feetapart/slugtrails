@@ -1,16 +1,21 @@
 <script>
-	import Search from '$lib/SearchBar.svelte';
-	import '../reset.css';
-	import '../global.css';
+	import Nav from './Nav.svelte';
+	import '../reset.css'
+	import '../global.css'
+	import SignIn from '$lib/SignIn.svelte'
+	import { userData } from '$stores/userData'
 </script>
 
-<nav>
-	<h1>Slug Trails</h1>
-	<Search />
-</nav>
+<Nav></Nav>
 
 <main>
-	<slot />
+	{#if $userData === null}
+		<SignIn />
+	{:else if $userData === undefined}
+		<code>loading...</code>
+	{:else}
+		<slot />
+	{/if}
 </main>
 
 <style>

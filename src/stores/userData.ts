@@ -62,7 +62,9 @@ export const userData = readable<User | null | undefined>(undefined, (set) => {
 		},
 		() => {
 			unsub()
-			set(null)
+			if (!user) {
+				set(null)
+			}
 		}
 	)
 	return () => {
