@@ -30,7 +30,11 @@ export const userData = readable<User | null | undefined>(undefined, (set) => {
 	let unsub = () => {}
 	user.subscribe(
 		async (user) => {
-			if (!user) {
+			if (user === undefined) {
+				return
+			}
+			if (user === null) {
+				set(null)
 				return
 			}
 			const userDoc = createUserDoc(user.uid)
