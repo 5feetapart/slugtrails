@@ -1,11 +1,20 @@
-<script>
+<script lang="ts">
 	import Search from '$lib/SearchBar.svelte'
+	let width = 400
 </script>
+
+<svelte:window bind:innerWidth={width} />
 
 <nav>
 	<h1><a href="/"> Slug Trails</a></h1>
 	<div class="flex">
-		<Search />
+		{#if width > 450}
+			<Search />
+		{:else}
+			<a class="btn" href="/search">
+				<span class="material-symbols-outlined"> search </span>
+			</a>
+		{/if}
 		<a class="btn" href="/settings">
 			<span class="material-symbols-outlined"> settings </span>
 		</a>
@@ -28,15 +37,6 @@
 		align-items: center;
 		justify-content: center;
 		color: var(--clr-gray-900);
-	}
-
-	a.btn {
-		background-color: var(--clr-pink-500);
-		color: var(--clr-gray-50);
-		padding: var(--gap-2);
-		margin: var(--gap-2);
-		text-decoration: none;
-		border-radius: var(--gap-2);
 	}
 	nav {
 		display: flex;

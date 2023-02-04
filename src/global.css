@@ -4,7 +4,7 @@
 	--clr-pink-700: #ebbcd4;
 	--clr-pink-500: #af7e97;
 
-    --clr-gray-50: #ffffff;
+	--clr-gray-50: #ffffff;
 	--clr-gray-100: #f5f5f5;
 	--clr-gray-200: #e0e0e0;
 	--clr-gray-300: #bdbdbd;
@@ -30,4 +30,13 @@
 
 h1 {
 	font-family: var(--ft-header);
+}
+
+a.btn {
+	background-color: var(--clr-pink-500);
+	color: var(--clr-gray-50);
+	padding: var(--gap-2);
+	margin: var(--gap-2);
+	text-decoration: none;
+	border-radius: var(--gap-2);
 }
