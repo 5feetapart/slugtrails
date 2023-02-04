@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { goto } from '$app/navigation';
 	import { fade } from 'svelte/transition';
 	export let placeholder: string | undefined = undefined;
 	let placeholders = ['free', 'outside', 'forest', 'hike', 'surf', 'lesson'];
@@ -25,19 +26,23 @@
 			placeholder = '';
 		}
 	}
+
+	function search(event: SubmitEvent) {
+		goto(`/search/${value}`, { replaceState: true });
+	}
 </script>
 
-<div class="parent">
+<form class="parent" on:submit|preventDefault={search}>
 	<div class="input-wrapper">
 		<input type="text" bind:value />
 		{#key placeholder}
 			<span class="placeholder" transition:fade={{ duration: 200 }}>{placeholder}...</span>
 		{/key}
 	</div>
-	<button>
+	<button type="submit">
 		<span class="material-symbols-outlined"> search </span>
 	</button>
-</div>
+</form>
 
 <style>
 	input,
