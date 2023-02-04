@@ -25,6 +25,8 @@
 	<h2>{greeting}</h2>
 	{#if $userData === null}
 		<GButton on:signin={signIn} width={220} />
+	{:else if $userData === undefined}
+		<code>loading...</code>
 	{:else}
 		<button on:click={() => signOut(auth)}>Sign Out</button>
 	{/if}

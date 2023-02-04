@@ -6,10 +6,14 @@ import { goto } from '$app/navigation'
 import { app } from '../firebase' // import firebase app
 import type { BasicUser, User } from '$lib/User'
 import { createUserDoc } from './db'
+import { browser } from '$app/environment'
 
 export const auth = getAuth(app)
 
 const user = readable<BasicUser | null | undefined>(undefined, (set) => {
+	if (!browser) {
+		return
+	}
 	const unsubscribe = onAuthStateChanged(auth, async (user) => {
 		if (user) {
 			set({
