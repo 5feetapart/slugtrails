@@ -1,34 +1,34 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import { goto } from '$app/navigation';
-	import { fade } from 'svelte/transition';
-	export let placeholder: string | undefined = undefined;
-	let placeholders = ['free', 'outside', 'forest', 'hike', 'surf', 'lesson'];
-	let defaultPlaceholder = placeholder;
+	import { browser } from '$app/environment'
+	import { goto } from '$app/navigation'
+	import { fade } from 'svelte/transition'
+	export let placeholder: string | undefined = undefined
+	let placeholders = ['free', 'outside', 'forest', 'hike', 'surf', 'lesson']
+	let defaultPlaceholder = placeholder
 	if (!placeholder) {
-		defaultPlaceholder = placeholders[Math.floor(Math.random() * placeholders.length)];
+		defaultPlaceholder = placeholders[Math.floor(Math.random() * placeholders.length)]
 	}
-	export let value = '';
-	let event = 0;
-	$: blank = value.length === 0;
+	export let value = ''
+	let event = 0
+	$: blank = value.length === 0
 	$: if (blank) {
 		if (browser) {
-			placeholder = defaultPlaceholder;
+			placeholder = defaultPlaceholder
 			event = window.setInterval(() => {
-				placeholder = placeholders[Math.floor(Math.random() * placeholders.length)];
-			}, 5000);
+				placeholder = placeholders[Math.floor(Math.random() * placeholders.length)]
+			}, 5000)
 		}
 	}
 
 	$: if (!blank) {
 		if (browser) {
-			window.clearInterval(event);
-			placeholder = '';
+			window.clearInterval(event)
+			placeholder = ''
 		}
 	}
 
 	function search(event: SubmitEvent) {
-		goto(`/search/${value}`, { replaceState: true });
+		goto(`/search/${value}`, { replaceState: true })
 	}
 </script>
 
@@ -69,6 +69,8 @@
 		display: flex;
 		margin: var(--gap-2);
 		border: var(--gap-1) solid var(--clr-pink-500);
+		border-radius: var(--gap-2);
+		overflow: hidden;
 	}
 
 	.placeholder {

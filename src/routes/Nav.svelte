@@ -4,19 +4,39 @@
 
 <nav>
 	<h1><a href="/"> Slug Trails</a></h1>
-	<Search />
-	<a href="/settings">
-		<span class="material-symbols-outlined"> settings </span>
-	</a>
+	<div class="flex">
+		<Search />
+		<a class="btn" href="/settings">
+			<span class="material-symbols-outlined"> settings </span>
+		</a>
+	</div>
 </nav>
 
 <style>
+	.flex {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+	}
 	h1 {
 		color: var(--clr-gray-900);
 		white-space: pre;
 	}
 	a {
 		color: inherit;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--clr-gray-900);
+	}
+
+	a.btn {
+		background-color: var(--clr-pink-500);
+		color: var(--clr-gray-50);
+		padding: var(--gap-2);
+		margin: var(--gap-2);
+		text-decoration: none;
+		border-radius: var(--gap-2);
 	}
 	nav {
 		display: flex;
