@@ -52,7 +52,6 @@ export const userData = readable<User | null | undefined>(undefined, (set) => {
 					})
 			})
 			unsub = onSnapshot(userDoc, (doc) => {
-				console.log('doc', doc)
 				set({
 					...doc.data(),
 					uid: user.uid,
@@ -61,10 +60,9 @@ export const userData = readable<User | null | undefined>(undefined, (set) => {
 				})
 			})
 		},
-		(error) => {
+		() => {
 			unsub()
 			set(null)
-			console.log('error', error)
 		}
 	)
 	return () => {
