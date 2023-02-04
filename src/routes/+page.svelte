@@ -6,7 +6,8 @@
 	import { userData } from '$stores/userData'
 	import { browser } from '$app/environment'
 
-	if ($userData === null && browser) {
+	$: if ($userData === null && browser) {
+		console.log('redirecting to login')
 		goto('/login', { replaceState: true })
 	}
 </script>
