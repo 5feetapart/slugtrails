@@ -4,8 +4,9 @@
 	import Slug from '$lib/Slug.svelte'
 	import { goto } from '$app/navigation'
 	import { userData } from '$stores/userData'
+	import { browser } from '$app/environment'
 
-	if ($userData === null) {
+	if ($userData === null && browser) {
 		goto('/login', { replaceState: true })
 	}
 </script>
