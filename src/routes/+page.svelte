@@ -11,13 +11,25 @@ button{
     background-color:var(--clr-pink-700);
     border:var(--gap-1)  solid var(--clr-pink-500);
     padding:var(--gap-2);
-    border-radius: var(--gap-2);
+    border-radius: var(--gap-3);
+}
+
+.wrapper{
+    background-color: var(--clr-green-700);
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    padding:var(--gap-3);
 }
 </style>
 
 <Slug />
+
+<div class="wrapper">
 <button>Journal</button>
 
 <Favorites />
 
 <Stats />
+</div>
