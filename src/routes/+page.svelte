@@ -5,22 +5,24 @@
 	import { goto } from '$app/navigation'
 	import { userData } from '$stores/userData'
 	import { browser } from '$app/environment'
-
-	$: if ($userData === null && browser) {
-		console.log('redirecting to login')
-		goto('/login', { replaceState: true })
-	}
+	import SignIn from '$lib/SignIn.svelte'
 </script>
 
-<Slug />
+{#if $userData === null}
+	<SignIn />
+{:else if $userData === undefined}
+	<code>loading...</code>
+{:else}
+	<Slug />
 
-<div class="wrapper">
-	<button>Journal</button>
+	<div class="wrapper">
+		<button>Journal</button>
 
-	<Favorites />
+		<Favorites />
 
-	<Stats />
-</div>
+		<Stats />
+	</div>
+{/if}
 
 <style>
 	button {
