@@ -4,6 +4,7 @@
 	import '../global.css'
 	import SignIn from '$lib/SignIn.svelte'
 	import { userData } from '$stores/userData'
+	import Spinner from '$lib/Spinner.svelte';
 </script>
 
 <Nav />
@@ -12,7 +13,9 @@
 	{#if $userData === null}
 		<SignIn />
 	{:else if $userData === undefined}
-		<code>loading...</code>
+	<div class="spinner-parent">
+		<Spinner />
+	  </div>
 	{:else}
 		<slot />
 	{/if}
@@ -21,6 +24,14 @@
 <style>
 	main {
 		max-width: var(--page-width);
-		margin: 0 auto;
+		margin: var(--gap-2) auto;
+	}
+	.spinner-parent {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	:global(.spinner-parent > *) {
+		width: 50px;
 	}
 </style>

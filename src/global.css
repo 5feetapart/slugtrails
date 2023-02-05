@@ -1,5 +1,5 @@
 :root {
-	--clr-green-700: #63ac6f;
+	--clr-green-700: #46af69;
 	--clr-green-500: #4b7151;
 	--clr-pink-700: #ebbcd4;
 	--clr-pink-500: #af7e97;
@@ -25,7 +25,8 @@
 
 	--gap-1: 0.25rem;
 	--gap-2: 0.5rem;
-	--gap-3: 0.75rem;
+	--gap-3: 0.5rem;
+	--gap-4: 1rem;
 }
 
 h1 {

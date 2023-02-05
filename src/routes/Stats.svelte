@@ -2,10 +2,6 @@
     <h1>Weekly Stats</h1>
     <div class="weekly">
         <div class="left">
-            <div class="circle">
-                <h2 style="">Streak</h2>
-                <h1>9</h1>
-            </div>
         </div>
         <div class="right">
             <!-- graph goes here -->
@@ -26,16 +22,18 @@
 
 <style>
 .wrapper{
+    display:grid;
+    justify-content: center;
+    flex-direction: column;
+    margin:var(--gap-4);
     text-align:center;
-    margin:var(--gap-3);
 
 }
 .weekly{
     border: var(--clr-green-500) solid var(--gap-1);
-    margin-left:var(--gap-2);
-    margin-right:var(--gap-2);
     display:flex;
     flex-direction:row;
+    width:75%;
 }
 .left{
     background-color:var(--clr-green-500);
@@ -47,17 +45,8 @@
     width:100%;
     height:100%;
     justify-content: center;
-    display:grid;
+    display:flex;
     padding:var(--gap-2);
-}
-.circle{
-    border-radius: 100%;
-    background-color: var(--clr-gray-50);
-    justify-content: center;
-    display:grid;
-    text-align:center;
-    color:var(--clr-pink-500);
-    height:100%;
 }
 
 .monthly{
