@@ -2,32 +2,33 @@ import { browser } from "$app/environment"
 import { readable } from "svelte/store";
 
 export type Activity = {
-	id: Number,
+	id: number,
 	title: string,
 	conditions: string,
 	coordinate: string,
 	address: string,
 	tags: string[],
-	people: any,
-	intensity: Number
-	cost: Number[],
+	people?: number[],
+	intensity: number
+	cost: number[],
 	description: string,
 	links: string[],
 	photo: string,
 	reward: string,
 	bring: string[],
-	Monday: any,
-	Tuesday: any,
-	Wensday: any,
-	Friday: any,
-	Saturday: any,
-	Sunday: any
+	Monday?: number[],
+	Tuesday?: number[],
+	Wensday?: number[],
+	Thursday?: number[],
+	Friday?: number[],
+	Saturday?: number[],
+	Sunday?: number[]
 	
 }
 
 async function jsonToActivityArray(path: string): Activity[] {
 	let json = await fetch(path);
-	buildout json to activity array
+	buildout json to activity Array, litterally return json
 }
 
 export const activities = readable<Activity[]>(undefined, (set) => {

@@ -35,13 +35,37 @@
         "Monday": [
             10,
             17
+        ],
+        "Tuesday": [
+            10,
+            17
+        ],
+        "Wensday": [
+            10,
+            17
+        ],
+        "Thursday": [
+            10,
+            17
+        ],
+        "Friday": [
+            10,
+            17
+        ],
+        "Saturday": [
+            10,
+            17
+        ],
+        "Sunday": [
+            10,
+            17
         ]
     },
     "2": {
         "id number": 2,
         "title": "Waterboarding for Fun and Profit",
         "conditions": "Warm",
-        "coordinate": "36.962860,-122.000120",
+        "coordinate": "36.962860,-122.000120\n",
         "address": "2214 E Cliff Dr, Santa Cruz, CA 95062",
         "tags": [
             "Water",
@@ -77,6 +101,30 @@
             "Harpoon:)"
         ],
         "Monday": [
+            12,
+            15
+        ],
+        "Tuesday": [
+            12,
+            15
+        ],
+        "Wensday": [
+            12,
+            15
+        ],
+        "Thursday": [
+            12,
+            15
+        ],
+        "Friday": [
+            12,
+            15
+        ],
+        "Saturday": [
+            12,
+            15
+        ],
+        "Sunday": [
             12,
             15
         ]
@@ -159,6 +207,30 @@
         "Monday": [
             10,
             21
+        ],
+        "Tuesday": [
+            10,
+            21
+        ],
+        "Wensday": [
+            10,
+            21
+        ],
+        "Thursday": [
+            10,
+            21
+        ],
+        "Friday": [
+            10,
+            21
+        ],
+        "Saturday": [
+            10,
+            21
+        ],
+        "Sunday": [
+            10,
+            21
         ]
     },
     "5": {
@@ -196,6 +268,30 @@
             ""
         ],
         "Monday": [
+            10,
+            17
+        ],
+        "Tuesday": [
+            10,
+            17
+        ],
+        "Wensday": [
+            10,
+            17
+        ],
+        "Thursday": [
+            10,
+            17
+        ],
+        "Friday": [
+            10,
+            17
+        ],
+        "Saturday": [
+            10,
+            17
+        ],
+        "Sunday": [
             10,
             17
         ]
@@ -374,6 +470,30 @@
         "Monday": [
             12,
             17
+        ],
+        "Tuesday": [
+            12,
+            17
+        ],
+        "Wensday": [
+            12,
+            17
+        ],
+        "Thursday": [
+            12,
+            17
+        ],
+        "Friday": [
+            12,
+            17
+        ],
+        "Saturday": [
+            12,
+            17
+        ],
+        "Sunday": [
+            12,
+            17
         ]
     },
     "10": {
@@ -507,6 +627,30 @@
         "Monday": [
             7,
             17
+        ],
+        "Tuesday": [
+            7,
+            17
+        ],
+        "Wensday": [
+            7,
+            17
+        ],
+        "Thursday": [
+            7,
+            17
+        ],
+        "Friday": [
+            7,
+            17
+        ],
+        "Saturday": [
+            7,
+            17
+        ],
+        "Sunday": [
+            7,
+            17
         ]
     },
     "13": {
@@ -546,6 +690,30 @@
         "Monday": [
             10,
             19
+        ],
+        "Tuesday": [
+            10,
+            19
+        ],
+        "Wensday": [
+            10,
+            19
+        ],
+        "Thursday": [
+            10,
+            19
+        ],
+        "Friday": [
+            10,
+            19
+        ],
+        "Saturday": [
+            10,
+            19
+        ],
+        "Sunday": [
+            10,
+            19
         ]
     },
     "14": {
@@ -580,6 +748,30 @@
             "Sunscreen"
         ],
         "Monday": [
+            8,
+            20
+        ],
+        "Tuesday": [
+            8,
+            20
+        ],
+        "Wensday": [
+            8,
+            20
+        ],
+        "Thursday": [
+            8,
+            20
+        ],
+        "Friday": [
+            8,
+            20
+        ],
+        "Saturday": [
+            8,
+            20
+        ],
+        "Sunday": [
             8,
             20
         ]
@@ -757,6 +949,30 @@
         "Monday": [
             9,
             19
+        ],
+        "Tuesday": [
+            9,
+            19
+        ],
+        "Wensday": [
+            9,
+            19
+        ],
+        "Thursday": [
+            9,
+            19
+        ],
+        "Friday": [
+            9,
+            19
+        ],
+        "Saturday": [
+            9,
+            19
+        ],
+        "Sunday": [
+            9,
+            19
         ]
     },
     "19": {
@@ -794,6 +1010,30 @@
         "Monday": [
             22.5,
             5
+        ],
+        "Tuesday": [
+            22.5,
+            5
+        ],
+        "Wensday": [
+            22.5,
+            5
+        ],
+        "Thursday": [
+            22.5,
+            5
+        ],
+        "Friday": [
+            22.5,
+            5
+        ],
+        "Saturday": [
+            22.5,
+            5
+        ],
+        "Sunday": [
+            22.5,
+            5
         ]
     },
     "20": {
@@ -827,6 +1067,30 @@
             "Water"
         ],
         "Monday": [
+            18.5,
+            19.5
+        ],
+        "Tuesday": [
+            18.5,
+            19.5
+        ],
+        "Wensday": [
+            18.5,
+            19.5
+        ],
+        "Thursday": [
+            18.5,
+            19.5
+        ],
+        "Friday": [
+            18.5,
+            19.5
+        ],
+        "Saturday": [
+            18.5,
+            19.5
+        ],
+        "Sunday": [
             18.5,
             19.5
         ]
