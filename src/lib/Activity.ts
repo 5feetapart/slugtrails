@@ -27,18 +27,20 @@ export type Activity = {
 
 async function jsonToActivityArray(path: string): Promise<Activity[]> {
 	let json = await fetch(path)
-	let data = await json.json()
-	let activities: Activity[] = []
-	for (let i = 0; i < data.length; i++) {
-		activities.push(data[i])
+	let data = JSON.parse(await json.text())
+	// convert json to array
+	let out = []
+	for (let i = 1; i < Object.keys(data).length; i++) {
+		out.push(data[i])
 	}
-	return activities
+	return out
 }
 
 export const activities = readable<Activity[]>(undefined, (set) => {
 	if (browser) {
-		jsonToActivityArray('slugTrails.json').then((activities) => {
+		jsonToActivityArray('/slugTrails.json').then((activities) => {
 			set(activities)
+			console.log(activities)
 		})
 	}
 })
