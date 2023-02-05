@@ -1,3 +1,5 @@
+import { createEventDispatcher } from 'svelte'
+
 /** @description broadcasts events 
  - pdown - with detail of PointerEvent + {e.relativeX, e.relativeY} 
  - pup - with detail of PointerEvent + {e.relativeX, e.relativeY}
@@ -9,18 +11,53 @@
  - pholdup - with detail of PointerEvent + {e.relativeX, e.relativeY}
  on the input elem */
 
-type PEvent = PointerEvent & {
-	relativeX: number
-	relativeY: number
-	downAt: number
-	downX: number
-	downY: number
+type Events = {
+	ppanstart: PEvent
+	ppinchdown: PPinchEvent
+	ppinchup: PPinchEvent
+	pholdup: PEvent
+	ppanup: PEvent
+	ppinch: PPinchEvent
+	zoom: ZoomEvent
+	pmove: PEvent
+	ppan: PanEvent
+	ptap: PEvent
 }
 
-type WEvent = WheelEvent & {
+export type HasScaleAmount = {
+	scaleAmount: number
+}
+
+export type HasRelativePos = {
 	relativeX: number
 	relativeY: number
 }
+
+export type HasClientPos = {
+	clientX: number
+	clientY: number
+}
+
+export type PEvent = PointerEvent &
+	HasRelativePos & {
+		downAt: number
+		downX: number
+		downY: number
+	}
+
+export type PanEvent = PEvent & {
+	fromPointer: boolean
+}
+
+export type WEvent = WheelEvent & HasRelativePos
+
+export type ZoomEvent = HasScaleAmount & HasRelativePos
+
+type PPinchEvent = HasScaleAmount & {
+	points: [PEvent, PEvent]
+}
+
+const dispatch = createEventDispatcher<Events>()
 
 export default function addMoreEvents(elem: HTMLElement) {
 	let isDown = false,
@@ -29,7 +66,7 @@ export default function addMoreEvents(elem: HTMLElement) {
 		scaleAmount = 1,
 		distAtDown: number | null = null
 
-	function addRelativePos(event: PEvent) {
+	function addRelativePos(event: HasRelativePos & HasClientPos) {
 		let rect = elem.getBoundingClientRect()
 		event.relativeX = event.clientX - rect.left
 		event.relativeY = event.clientY - rect.top
@@ -51,19 +88,8 @@ export default function addMoreEvents(elem: HTMLElement) {
 			...(e as PEvent)
 		}
 
-		const pdownEvent = new CustomEvent('pdown', {
-			detail: {
-				...e
-			}
-		})
-
 		if (pointersDownCt == 0) {
-			const startPanEvent = new CustomEvent('ppanstart', {
-				detail: {
-					...e
-				}
-			})
-			elem.dispatchEvent(startPanEvent)
+			dispatch('ppanstart', e as PEvent)
 		}
 
 		if (pointersDownCt == 1) {
@@ -76,27 +102,21 @@ export default function addMoreEvents(elem: HTMLElement) {
 				Math.pow(pointersDown[keys[0]].relativeX - pointersDown[keys[1]].relativeX, 2) +
 					Math.pow(pointersDown[keys[0]].relativeY - pointersDown[keys[1]].relativeY, 2)
 			)
-			const ppinchEvent = new CustomEvent('ppinchdown', {
-				detail: {
-					points: [pointersDown[keys[0]], pointersDown[keys[1]]],
-					scaleAmount
-				}
-			})
 
-			elem.dispatchEvent(ppinchEvent)
+			dispatch('ppinchdown', {
+				points: [pointersDown[keys[0]], pointersDown[keys[1]]],
+				scaleAmount
+			})
 		}
 		pointersDownCt++
 	})
 	let onUp = (e: PointerEvent) => {
 		const keys = Object.keys(pointersDown).map((key) => parseInt(key))
 		if (pointersDownCt == 2) {
-			const ppinchEvent = new CustomEvent('ppinchup', {
-				detail: {
-					points: [pointersDown[keys[0]], pointersDown[keys[1]]],
-					scaleAmount
-				}
+			dispatch('ppinchup', {
+				points: [pointersDown[keys[0]], pointersDown[keys[1]]],
+				scaleAmount
 			})
-			elem.dispatchEvent(ppinchEvent)
 		} else if (pointersDownCt == 1) {
 			const smallDist = Math.sqrt(
 				Math.pow(pointersDown[keys[0]].relativeX - pointersDown[keys[0]].downX, 2) +
@@ -104,30 +124,14 @@ export default function addMoreEvents(elem: HTMLElement) {
 			)
 			if (smallDist < 10) {
 				if (performance.now() - pointersDown[keys[0]].downAt < 500) {
-					const ptapEvent = new CustomEvent('ptap', {
-						detail: {
-							...pointersDown[keys[0]]
-						}
-					})
-					elem.dispatchEvent(ptapEvent)
+					dispatch('ptap', pointersDown[keys[0]])
 				}
 				// else broadcast pholdup
 				else {
-					const pholdupEvent = new CustomEvent('pholdup', {
-						detail: {
-							...pointersDown[keys[0]]
-						}
-					})
-					elem.dispatchEvent(pholdupEvent)
+					dispatch('pholdup', pointersDown[keys[0]])
 				}
 			} else {
-				elem.dispatchEvent(
-					new CustomEvent('ppanup', {
-						detail: {
-							...pointersDown[keys[0]]
-						}
-					})
-				)
+				dispatch('ppanup', pointersDown[keys[0]])
 			}
 		}
 		const deleted = pointersDown[e.pointerId]
@@ -155,12 +159,7 @@ export default function addMoreEvents(elem: HTMLElement) {
 		}
 		pointerDict = pointersDown[e.pointerId]
 		if (isDown) {
-			const pmoveEvent = new CustomEvent('pmove', {
-				detail: {
-					...pointerDict
-				}
-			})
-			elem.dispatchEvent(pmoveEvent)
+			dispatch('pmove', pointerDict)
 
 			if (pointersDownCt == 2) {
 				const keys = Object.keys(pointersDown).map((key) => parseInt(key))
@@ -169,21 +168,15 @@ export default function addMoreEvents(elem: HTMLElement) {
 				const dist = Math.sqrt(
 					Math.pow(p1.relativeX - p2.relativeX, 2) + Math.pow(p1.relativeY - p2.relativeY, 2)
 				)
-				const ppinchEvent = new CustomEvent('ppinch', {
-					detail: {
-						points: [p1, p2],
-						scaleAmount: dist / distAtDown
-					}
+				dispatch('ppinch', {
+					points: [p1, p2],
+					scaleAmount: dist / distAtDown
 				})
-				elem.dispatchEvent(ppinchEvent)
-				const zoomEvent = new CustomEvent('zoom', {
-					detail: {
-						scaleAmount: dist / distAtDown,
-						relativeX: (p1.relativeX + p2.relativeX) / 2,
-						relativeY: (p1.relativeY + p2.relativeY) / 2
-					}
+				dispatch('zoom', {
+					scaleAmount: dist / distAtDown,
+					relativeX: (p1.relativeX + p2.relativeX) / 2,
+					relativeY: (p1.relativeY + p2.relativeY) / 2
 				})
-				elem.dispatchEvent(zoomEvent)
 				distAtDown = dist
 			} else if (pointersDownCt == 1) {
 				const panEvent = new CustomEvent('ppan', {
@@ -192,6 +185,7 @@ export default function addMoreEvents(elem: HTMLElement) {
 						fromPointer: true
 					}
 				})
+				dispatch('ppan', pointerDict)
 				elem.dispatchEvent(panEvent)
 			}
 		}
@@ -202,12 +196,14 @@ export default function addMoreEvents(elem: HTMLElement) {
 		(e: WheelEvent) => {
 			e.preventDefault()
 			if (e.ctrlKey) {
-				addRelativePos(e)
+				let event = e as WEvent
+
+				addRelativePos(event)
 				const zoomEvent = new CustomEvent('zoom', {
 					detail: {
 						scaleAmount: e.deltaY > 0 ? (1 - e.deltaY * 0.01) / 1 : 1 / (1 + 0.01 * e.deltaY),
-						relativeX: e.relativeX,
-						relativeY: e.relativeY
+						relativeX: event.relativeX,
+						relativeY: event.relativeY
 					}
 				})
 				elem.dispatchEvent(zoomEvent)

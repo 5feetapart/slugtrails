@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths'
 	import { draw } from 'svelte/transition'
-
+	export let items: string[] = []
 	let slug: HTMLCanvasElement
 	$: context = slug ? slug.getContext('2d') : null
 
@@ -19,14 +19,26 @@
 		if (!context) return
 	}
 	function draw_slug() {
-		slug.width = window.innerWidth
 		if (!context) return
-		context.drawImage(base_image, 0, 0, window.innerWidth, 450)
-		context.drawImage(slug_image, window.innerWidth / 2 - 100, 80)
+		console.log(slug.width)
+		context.drawImage(base_image, 0, 0, slug.width, 450)
+		context.drawImage(slug_image, slug.width / 2 - 100, 80)
 	}
 
-	$: context && draw_slug()
+	function resize() {
+		if (!slug) return
+		// remove slug width and height attributes
+		slug.removeAttribute('width')
+		slug.removeAttribute('height')
+		slug.width = slug.clientWidth
+		slug.height = slug.clientHeight
+		draw_slug()
+	}
+
+	$: context && resize()
 </script>
+
+<svelte:window on:resize={resize} />
 
 <div class="parent">
 	<!-- Arrows -->
@@ -42,11 +54,15 @@
 	</div>
 	<!-- Slug -->
 	<div class="slug-container">
-		<canvas width="100%" height="450" bind:this={slug} />
+		<canvas bind:this={slug} />
 	</div>
 </div>
 
 <style>
+	canvas {
+		width: 100%;
+		height: 450px;
+	}
 	.parent {
 		background-color: white;
 		position: relative;
