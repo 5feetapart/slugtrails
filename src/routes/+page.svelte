@@ -8,6 +8,7 @@
 	import SignIn from '$lib/SignIn.svelte'
 </script>
 
+<div class="contain">
 <Slug />
 
 <div class="wrapper">
@@ -16,6 +17,7 @@
 	<Favorites />
 
 	<Stats />
+</div>
 </div>
 
 <style>
@@ -35,5 +37,9 @@
 		justify-content: center;
 		align-items: center;
 		padding: var(--gap-3);
+	}
+
+	.contain{
+		max-width:var(--page-width);
 	}
 </style>

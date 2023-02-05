@@ -28,6 +28,7 @@
 		text-align: center;
 	}
 	.weekly {
+        justify-content:center;
 		border: var(--clr-green-500) solid var(--gap-1);
 		display: flex;
 		flex-direction: row;

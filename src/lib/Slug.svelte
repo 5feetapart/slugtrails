@@ -20,19 +20,8 @@
 	}
 	function draw_slug() {
 		if (!context) return
-		console.log(slug.width)
-		context.drawImage(base_image, 0, 0, slug.width, 450)
-		context.drawImage(slug_image, slug.width / 2 - 100, 80)
-	}
-
-	function resize() {
-		if (!slug) return
-		// remove slug width and height attributes
-		slug.removeAttribute('width')
-		slug.removeAttribute('height')
-		slug.width = slug.clientWidth
-		slug.height = slug.clientHeight
-		draw_slug()
+		context.drawImage(base_image, 0, 0, window.innerWidth, 450)
+		context.drawImage(slug_image, window.innerWidth / 2 - 100, 80, 200, 300)
 	}
 
 	$: context && resize()
