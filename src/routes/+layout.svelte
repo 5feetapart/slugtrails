@@ -5,6 +5,7 @@
 	import SignIn from '$lib/SignIn.svelte'
 	import { userData } from '$stores/userData'
 	import Spinner from '$lib/Spinner.svelte'
+	import 'leaflet/dist/leaflet.css';
 </script>
 
 <Nav />

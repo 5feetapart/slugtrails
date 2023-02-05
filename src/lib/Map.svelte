@@ -13,10 +13,9 @@
 			id: ""
 		}
 	]
-
-
-	const mapOptions: MapOptions = {
-        center: [1.364917, 103.822872],
+	import {onMount} from "svelte";
+    const mapOptions: MapOptions = {
+        center: [1.250111, 103.830933],
         zoom: 11,
     };
     const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
@@ -26,18 +25,18 @@
         maxNativeZoom: 19,
         attribution: "© OpenStreetMap contributors",
     };
-
-
-
-
-    let map: LeafletMap
+    let leafletMap: LeafletMap;
+    onMount(() => {
+        leafletMap.getMap().fitBounds([[1.266835, 103.796403], [1.232988, 103.854861]]);
+    });
 </script>
 
-<div class="map">
-    <LeafletMap bind:this={map} options={mapOptions}>
+<div class="example map">
+    <LeafletMap bind:this={leafletMap} options={mapOptions}>
         <TileLayer url={tileUrl} options={tileLayerOptions}/>
     </LeafletMap>
 </div>
+
 
 
 
