@@ -1,5 +1,3 @@
-import { createEventDispatcher } from 'svelte'
-
 /** @description broadcasts events 
  - pdown - with detail of PointerEvent + {e.relativeX, e.relativeY} 
  - pup - with detail of PointerEvent + {e.relativeX, e.relativeY}
@@ -11,7 +9,9 @@ import { createEventDispatcher } from 'svelte'
  - pholdup - with detail of PointerEvent + {e.relativeX, e.relativeY}
  on the input elem */
 
-type Events = {
+import type { createEventDispatcher } from 'svelte'
+
+export type Events = {
 	ppanstart: PEvent
 	ppinchdown: PPinchEvent
 	ppinchup: PPinchEvent
@@ -53,13 +53,14 @@ export type WEvent = WheelEvent & HasRelativePos
 
 export type ZoomEvent = HasScaleAmount & HasRelativePos
 
-type PPinchEvent = HasScaleAmount & {
+export type PPinchEvent = HasScaleAmount & {
 	points: [PEvent, PEvent]
 }
 
-const dispatch = createEventDispatcher<Events>()
-
-export default function addMoreEvents(elem: HTMLElement) {
+export default function addMoreEvents(
+	elem: HTMLElement,
+	dispatch: ReturnType<typeof createEventDispatcher<Events>>
+) {
 	let isDown = false,
 		pointersDown: { [id: number]: PEvent } = {},
 		pointersDownCt = 0,

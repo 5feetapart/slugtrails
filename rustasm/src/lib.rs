@@ -1,5 +1,6 @@
 mod utils;
 mod favorite_activity;
+mod search;
 
 use std::{array, convert::TryInto, vec, ops::IndexMut, collections::HashMap};
 

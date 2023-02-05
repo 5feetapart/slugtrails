@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
+	import GestureCanvas from './GestureCanvas.svelte'
 	let canvas: HTMLCanvasElement
 	let cWidth = 400
 	let cHeight = 400
@@ -68,11 +69,12 @@
 </script>
 
 <svelte:window on:resize={() => resize()} />
-
-<canvas bind:this={canvas} />
+<div>
+	<GestureCanvas on:ppan={(event) => console.log(event.detail)} bind:canvas />
+</div>
 
 <style>
-	canvas {
+	div {
 		position: fixed;
 		top: 5rem;
 		height: calc(100vh - 5rem);
