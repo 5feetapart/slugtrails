@@ -26,16 +26,20 @@ export type Activity = {
 	
 }
 
-async function jsonToActivityArray(path: string): Activity[] {
+async function jsonToActivityArray(path: string): Promise<Activity[]> {
 	let json = await fetch(path);
-
+	let data = await json.json();
+	let activities: Activity[] = [];
+	for (let i = 0; i < data.length; i++) {
+		activities.push(data[i]);
+	}
+	return activities;
 }
 
 export const activities = readable<Activity[]>(undefined, (set) => {
-	if (browser) set(jsonToActivityArray("slugTrails.json"));
+	if (browser) {
+		jsonToActivityArray("slugTrails.json").then((activities) => {
+			set(activities);
+		}
+	}
 })
-// interface locationObject {
-// 	[x: string]:
-// }
-
-// interface Location extends Array<locationObject> { }
