@@ -1,0 +1,878 @@
+{
+    "1": {
+        "id number": 1,
+        "title": "Cruise the Coast",
+        "conditions": "Warm",
+        "coordinate": "36.964710,-122.042340",
+        "address": "1730 Mission St, Santa Cruz, CA 95060",
+        "tags": [
+            "Bike",
+            "Ocean",
+            "Outside"
+        ],
+        "number of people": null,
+        "intensity from 1 to 5": 1,
+        "duration in hr": [
+            1,
+            2
+        ],
+        "time of day": "10-17",
+        "cost in USD": [
+            40,
+            50
+        ],
+        "description": "Rent Ebikes and cruise the coast with minimal effort, a great activity with friends and easy to pair with an exciting lunch along the ocean.",
+        "links": [
+            "https://www.epicentercycling.com/",
+            "https://www.santacruz.org/blog/stay-in-shape-while-traveling-to-santa-cruz-county/"
+        ],
+        "photo": "https://www.santacruz.org/wp-content/uploads/2017/11/Dreamy20Bike20Ride20Along20West20Cliff20Drive20Photo20Credit20Garrick20Ramirez-2.jpg",
+        "potential reward": "a battery",
+        "what to bring": [
+            "Helmet",
+            "Water"
+        ],
+        "Monday": [
+            10,
+            17
+        ]
+    },
+    "2": {
+        "id number": 2,
+        "title": "Waterboarding for Fun and Profit",
+        "conditions": "Warm",
+        "coordinate": "36.962860,-122.000120\n",
+        "address": "2214 E Cliff Dr, Santa Cruz, CA 95062",
+        "tags": [
+            "Water",
+            "Board",
+            "Paddle",
+            "Harbor",
+            "Lesson",
+            "Ocean",
+            "Outside"
+        ],
+        "number of people": null,
+        "intensity from 1 to 5": 3,
+        "duration in hr": [
+            1,
+            2
+        ],
+        "time of day": "12-15",
+        "cost in USD": [
+            45,
+            55
+        ],
+        "description": "Learn to Paddle Board on the scerene Santa Cruz Harbor(and see if you can spot our local sea monster). Make sure to book in advance",
+        "links": [
+            "https://www.supshacksantacruz.com/santa-cruz-harbor/lessons/"
+        ],
+        "photo": "https://fh-sites.imgix.net/sites/2007/2019/01/22170051/jeXi2LjeSaiwQ8VJsuMqlQ-e1548176480400.jpg",
+        "potential reward": "paddle",
+        "what to bring": [
+            "Swimsuit",
+            "Sunglasses",
+            "Sunscreen",
+            "Water",
+            "Harpoon:)"
+        ],
+        "Monday": [
+            12,
+            15
+        ]
+    },
+    "3": {
+        "id number": 3,
+        "title": "Taking the High Road",
+        "conditions": "Dry",
+        "coordinate": "37.024620,-122.091590",
+        "address": "Empire Grade (at Mile 1306), California 95018",
+        "tags": [
+            "Forrest",
+            "UCSC",
+            "Hike",
+            "Outside",
+            "Free"
+        ],
+        "number of people": null,
+        "intensity from 1 to 5": 4,
+        "duration in hr": [
+            2,
+            4
+        ],
+        "time of day": "Sunrise-Sunset",
+        "cost in USD": [
+            0
+        ],
+        "description": "Explore a beautiful section of this UC campus while getting some great excersise. Protip: If you go early enough on a saturday you may not even have to see any students.",
+        "links": [
+            "https://www.alltrails.com/trail/us/california/ucsc-upper-campus-trail"
+        ],
+        "photo": "https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvMjA2NTg3NjMvZjE1YzhiMDlkMzU2ZmFhZDU3NjVlN2FmNGZhYmI3NWEuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJqcGVnIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==",
+        "potential reward": "hiking boot?",
+        "what to bring": [
+            "Water",
+            "ComfyShoes",
+            "Layers"
+        ],
+        "Monday": "Sunrise-Sunset",
+        "Tuesday": "Sunrise-Sunset",
+        "Wensday": "Sunrise-Sunset",
+        "Thursday": "Sunrise-Sunset",
+        "Friday": "Sunrise-Sunset",
+        "Saturday": "Sunrise-Sunset",
+        "Sunday": "Sunrise-Sunset"
+    },
+    "4": {
+        "id number": 4,
+        "title": "Feeling Bold-er?",
+        "conditions": "Inside",
+        "coordinate": "36.971180,-121.96664",
+        "address": "1404 38th Ave, Santa Cruz, CA 95010",
+        "tags": [
+            "Inside",
+            "Climbing"
+        ],
+        "number of people": [
+            2
+        ],
+        "intensity from 1 to 5": 4,
+        "duration in hr": [
+            1,
+            2
+        ],
+        "time of day": "10-21",
+        "cost in USD": [
+            20,
+            30
+        ],
+        "description": "Tired of children having all the fun clambering on things? Get a full body workout and prepare for your next hiest with these short \"boulder\" routes.",
+        "links": [
+            "https://www.agilityboulders.com/"
+        ],
+        "photo": "https://static.wixstatic.com/media/79fdf7_a4c22c9fddaf401ab89d5985af166b3b~mv2.jpg/v1/fill/w_729,h_486,al_c,q_80,usm_0.66_1.00_0.01/79fdf7_a4c22c9fddaf401ab89d5985af166b3b~mv2.jpg",
+        "potential reward": "Chalk Bag? Rock?",
+        "what to bring": [
+            "ExcersiseClothes",
+            "Agoodattitude"
+        ],
+        "Monday": [
+            10,
+            21
+        ]
+    },
+    "5": {
+        "id number": 5,
+        "title": "Smile and Waves (beginer)",
+        "conditions": "Dry",
+        "coordinate": "36.9611366,-122.044285",
+        "address": "849 Almar Ave, Santa Cruz, CA 95060",
+        "tags": [
+            "Outside",
+            "Ocean",
+            "Board",
+            "Lesson"
+        ],
+        "number of people": null,
+        "intensity from 1 to 5": 4,
+        "duration in hr": [
+            1,
+            3
+        ],
+        "time of day": "10-17",
+        "cost in USD": [
+            120,
+            300
+        ],
+        "description": "Where better to learn surfing than where it was first introduced to the US? Nowhere that's where.",
+        "links": [
+            "https://richardschmidt.com/"
+        ],
+        "photo": "http://goodneighborstories.com/wp-content/uploads/2013/04/Surfing-Soldiers-and-Volunteers.jpg",
+        "potential reward": "surfboard",
+        "what to bring": [
+            "arad'tude",
+            "Sunscreen",
+            ""
+        ],
+        "Monday": [
+            10,
+            17
+        ]
+    },
+    "6": {
+        "id number": 6,
+        "title": "Smile and Waves (experienced)",
+        "conditions": "Dry",
+        "coordinate": "36.951981,-122.026527\n",
+        "address": "700 W Cliff Dr, Santa Cruz, CA 95060",
+        "tags": [
+            "Outside",
+            "Ocean",
+            "Experienced",
+            "Board",
+            "Free"
+        ],
+        "number of people": null,
+        "intensity from 1 to 5": 5,
+        "duration in hr": [
+            2,
+            6
+        ],
+        "time of day": "Sunrise-Sunset",
+        "cost in USD": [
+            0
+        ],
+        "description": "Do you own a surfboard and scoff at my poor understanding of when to surf? Then skip the lessons to surf the legendary Steamer Lane, or wherever else your superior skills take you.",
+        "links": [
+            "https://www.surfertoday.com/surfing/steamer-lane-the-heart-and-soul-of-santa-cruz-surfing"
+        ],
+        "photo": "https://www.surfertoday.com/images/stories/steamer-lane-surfer.jpg",
+        "potential reward": "gold surfboard",
+        "what to bring": [
+            "Surfboard",
+            "Wetsuit",
+            "Sunscreen",
+            "Plentyofwaves"
+        ],
+        "Monday": "Sunrise-Sunset",
+        "Tuesday": "Sunrise-Sunset",
+        "Wensday": "Sunrise-Sunset",
+        "Thursday": "Sunrise-Sunset",
+        "Friday": "Sunrise-Sunset",
+        "Saturday": "Sunrise-Sunset",
+        "Sunday": "Sunrise-Sunset"
+    },
+    "7": {
+        "id number": 7,
+        "title": "Real Skating (don't tell the boarders)",
+        "conditions": "Inside",
+        "coordinate": "36.9788818359375,-122.00996398925781",
+        "address": "1606 Seabright Ave, Santa Cruz, CA 95062\n",
+        "tags": [
+            "Inside"
+        ],
+        "number of people": null,
+        "intensity from 1 to 5": 3,
+        "duration in hr": [
+            1,
+            2
+        ],
+        "time of day": "x,x,19.5-22,15.5-17.5,19.5-22,14-16-19.5-22,14-16",
+        "cost in USD": [
+            8,
+            15
+        ],
+        "description": "Grab your bell bottoms and get ready to groove like its the 70s. Only open Wensday Friday Saturday and cash only.",
+        "links": [
+            "http://www.santacruzrollerpalladium.com/"
+        ],
+        "photo": "http://www.santacruzrollerpalladium.com/wp-content/uploads/2016/02/SC-roller-palladium_neon-sign.png",
+        "potential reward": "disco ball",
+        "what to bring": [
+            "Excersiseclothes",
+            "awillingnesstofall"
+        ],
+        "Wensday": [
+            19.5,
+            22
+        ],
+        "Thursday": [
+            15.5,
+            17.5
+        ],
+        "Friday": [
+            19.5,
+            22
+        ],
+        "Saturday": [
+            14,
+            16,
+            19.5,
+            22
+        ],
+        "Sunday": [
+            14,
+            16
+        ]
+    },
+    "8": {
+        "id number": 8,
+        "title": "Jumprasic Park",
+        "conditions": "Dry",
+        "coordinate": "36.96892547607422,-122.01998901367188",
+        "address": "299 San Lorenzo Blvd, Santa Cruz, CA 95060",
+        "tags": [
+            "Outside",
+            "Board",
+            "Experienced",
+            "Free"
+        ],
+        "number of people": null,
+        "intensity from 1 to 5": 3,
+        "duration in hr": [
+            1,
+            4
+        ],
+        "time of day": "Sunrise-Sunset",
+        "cost in USD": [
+            0
+        ],
+        "description": "If world class surfing and paddleboarding havn't convinced you of Santa Cruz's skills with boards it's time to try out skateboarding. There's a reason skating's oldest continuos company is named after our humble town ;)",
+        "links": [
+            "https://goo.gl/maps/QYZCyxLbKgVDUiQg9"
+        ],
+        "photo": "https://s3-us-west-1.amazonaws.com/west-coast-skateparks/skatepark_images/photos/000/001/368/original/santa_20cruz2-06.jpg",
+        "potential reward": "skateboard",
+        "what to bring": [
+            "Skateboard",
+            "Helmet",
+            "Water"
+        ],
+        "Monday": "Sunrise-Sunset",
+        "Tuesday": "Sunrise-Sunset",
+        "Wensday": "Sunrise-Sunset",
+        "Thursday": "Sunrise-Sunset",
+        "Friday": "Sunrise-Sunset",
+        "Saturday": "Sunrise-Sunset",
+        "Sunday": "Sunrise-Sunset"
+    },
+    "9": {
+        "id number": 9,
+        "title": "Anything but Bored, Walk",
+        "conditions": "Dry",
+        "coordinate": "36.9645803,-122.0151271",
+        "address": "400 Beach St, Santa Cruz, CA 95060\n",
+        "tags": [
+            "Outside",
+            "Walking",
+            "Ocean"
+        ],
+        "number of people": [
+            2
+        ],
+        "intensity from 1 to 5": 1,
+        "duration in hr": [
+            1,
+            3
+        ],
+        "time of day": "12-17",
+        "cost in USD": [
+            0
+        ],
+        "description": "With it's colorful lights and endless entertainment its easy to find yourself strolling up and down the mile long boardwalk for hours. This makes for fantastic excersise so long as you can make sure not to stop for too many delicious churros. Only open on weekends.",
+        "links": [
+            "https://beachboardwalk.com/"
+        ],
+        "photo": "https://i.ytimg.com/vi/1DbQyMm9euY/maxresdefault.jpg",
+        "potential reward": "ticket",
+        "what to bring": [
+            "Comfyshoes",
+            "Clothinglayers",
+            "Water"
+        ],
+        "Monday": [
+            12,
+            17
+        ]
+    },
+    "10": {
+        "id number": 10,
+        "title": "Rocks and Roll",
+        "conditions": "Dry",
+        "coordinate": "37.02695, -122.02281\n",
+        "address": "2470 El Rancho Dr, Santa Cruz, CA 95060",
+        "tags": [
+            "Outside",
+            "Climbing",
+            "Forrest",
+            "Experienced",
+            "Free"
+        ],
+        "number of people": [
+            2
+        ],
+        "intensity from 1 to 5": 5,
+        "duration in hr": [
+            2,
+            5
+        ],
+        "time of day": "Sunrise-Sunset",
+        "cost in USD": [
+            0
+        ],
+        "description": "Whether indoor climbing is getting repetitive or your van broke down on the way to Yosemite, this craig is a great enviorment for intermediete to advanced climbers to have some fun.",
+        "links": [
+            "https://www.mountainproject.com/area/114794572/order-of-the-moose-wall"
+        ],
+        "photo": "https://mountainproject.com/assets/photos/climb/118793412_medium_1587798914.jpg",
+        "potential reward": "nut",
+        "what to bring": [
+            "Harnesses",
+            "belaypartner",
+            "50m+climbingrope",
+            "Tradrack",
+            "Climbingshoes",
+            "Chalk",
+            "Belaydevice",
+            "Sometunes"
+        ],
+        "Monday": "Sunrise-Sunset",
+        "Tuesday": "Sunrise-Sunset",
+        "Wensday": "Sunrise-Sunset",
+        "Thursday": "Sunrise-Sunset",
+        "Friday": "Sunrise-Sunset",
+        "Saturday": "Sunrise-Sunset",
+        "Sunday": "Sunrise-Sunset"
+    },
+    "11": {
+        "id number": 11,
+        "title": "European Football",
+        "conditions": "Dry",
+        "coordinate": "36.97105026245117,-122.02778625488281",
+        "address": "119 Center St, Santa Cruz, CA 95060",
+        "tags": [
+            "Outside",
+            "Ball",
+            "Teams",
+            "Free"
+        ],
+        "number of people": [
+            4
+        ],
+        "intensity from 1 to 5": 3,
+        "duration in hr": [
+            1,
+            3
+        ],
+        "time of day": "Sunrise-Sunset",
+        "cost in USD": [
+            0
+        ],
+        "description": "I'm gonna assume you've got this one",
+        "links": [
+            "https://goo.gl/maps/oraV37Z4x5kJNRnq8"
+        ],
+        "photo": "https://lh5.googleusercontent.com/p/AF1QipPUr7JE9RrK7HPRT6qnRQvuknzbYh1BZFv3qFFl=w408-h544-k-no",
+        "potential reward": "football",
+        "what to bring": [
+            "Water",
+            "Soccerball"
+        ],
+        "Monday": "Sunrise-Sunset",
+        "Tuesday": "Sunrise-Sunset",
+        "Wensday": "Sunrise-Sunset",
+        "Thursday": "Sunrise-Sunset",
+        "Friday": "Sunrise-Sunset",
+        "Saturday": "Sunrise-Sunset",
+        "Sunday": "Sunrise-Sunset"
+    },
+    "12": {
+        "id number": 12,
+        "title": "Tennis(by the)sea",
+        "conditions": "Dry",
+        "coordinate": "36.966907,-122.030841",
+        "address": "Neary Lagoon Public Tennis Courts, Santa Cruz, CA 95060",
+        "tags": [
+            "Outside",
+            "Ball",
+            "Free",
+            "Teams"
+        ],
+        "number of people": [
+            2,
+            4
+        ],
+        "intensity from 1 to 5": 3,
+        "duration in hr": [
+            1,
+            2
+        ],
+        "time of day": "7-17",
+        "cost in USD": [
+            0
+        ],
+        "description": "Depite apperently being \"all in the wrist\", tennis is a fantastic way to work on speed, agility, and cardio. ",
+        "links": [
+            "https://goo.gl/maps/5NHwjDXdAS6ADegz5"
+        ],
+        "photo": "https://lh5.googleusercontent.com/p/AF1QipO9QS0pY9wtIlA_lQGHvMzOI-BmSmaW71eExjr6=w408-h306-k-no",
+        "potential reward": "tennis ball",
+        "what to bring": [
+            "Tennisracquets",
+            "Tennisballs",
+            "Tennisshoes",
+            "Tenniswater"
+        ],
+        "Monday": [
+            7,
+            17
+        ]
+    },
+    "13": {
+        "id number": 13,
+        "title": "Basketball",
+        "conditions": "Dry",
+        "coordinate": "36.969555, -122.028430",
+        "address": "322 Maple St, Santa Cruz, CA 95060",
+        "tags": [
+            "Outside",
+            "Ball",
+            "Free",
+            "Teams"
+        ],
+        "number of people": [
+            2
+        ],
+        "intensity from 1 to 5": 3,
+        "duration in hr": [
+            1,
+            3
+        ],
+        "time of day": "10-19",
+        "cost in USD": [
+            0
+        ],
+        "description": "Ain't no rule says a dog can't play basketball and ain't no rule that says you can't either.",
+        "links": [
+            "https://www.cityofsantacruz.com/government/city-departments/parks-recreation/parks-beaches-open-spaces/parks/laurel-park"
+        ],
+        "photo": "https://img.geocaching.com/waymarking/large/b67d4e96-2ace-450a-aee4-893712c89fb2.jpg",
+        "potential reward": "basketball",
+        "what to bring": [
+            "Basketball",
+            "Comfyshoes"
+        ],
+        "Monday": [
+            10,
+            19
+        ]
+    },
+    "14": {
+        "id number": 14,
+        "title": "I Can't Belive its Not Ocean!",
+        "conditions": "Dry",
+        "coordinate": "36.9845846,-122.0375509",
+        "address": "275 Harvey West Blvd, Santa Cruz, CA 95060",
+        "tags": [
+            "Outside",
+            "Water",
+            "Beach"
+        ],
+        "number of people": null,
+        "intensity from 1 to 5": 3,
+        "duration in hr": [
+            1,
+            3
+        ],
+        "time of day": "8-20",
+        "cost in USD": [
+            0
+        ],
+        "description": "Make sure to check the hours before going.",
+        "links": [
+            "https://recreation.ucsc.edu/aquatics/index.html"
+        ],
+        "photo": "https://recreation.ucsc.edu/images/aquatics/aquaticsminibanner1.jpg",
+        "potential reward": "goggles",
+        "what to bring": [
+            "Swimsuit",
+            "Sunscreen"
+        ],
+        "Monday": [
+            8,
+            20
+        ]
+    },
+    "15": {
+        "id number": 15,
+        "title": "Beachless Beach Vollyball",
+        "conditions": "Warm",
+        "coordinate": "36.99530239416076, -122.05275583683003",
+        "address": "East Remote Parking Lot Santa Cruz, CA 95064",
+        "tags": [
+            "Outside",
+            "Free",
+            "Teams"
+        ],
+        "number of people": [
+            4
+        ],
+        "intensity from 1 to 5": 3,
+        "duration in hr": [
+            1,
+            2
+        ],
+        "time of day": "Sunrise-Sunset",
+        "cost in USD": [
+            0
+        ],
+        "description": "Sand may be course, rough, irritating, and get everywhere, but it makes a great court for vollyball. A supurb activity for large groups",
+        "links": [
+            "https://recreation.ucsc.edu/facilities/src-east.html"
+        ],
+        "photo": "https://preview.redd.it/zjjapdw4j0381.jpg?width=640&crop=smart&auto=webp&s=9a7c5004559a9802f85d20e926eecaf40fd28e58",
+        "potential reward": "Vollyball",
+        "what to bring": [
+            "Vollyball",
+            "Water",
+            "Sunscreen"
+        ],
+        "Monday": "Sunrise-Sunset",
+        "Tuesday": "Sunrise-Sunset",
+        "Wensday": "Sunrise-Sunset",
+        "Thursday": "Sunrise-Sunset",
+        "Friday": "Sunrise-Sunset",
+        "Saturday": "Sunrise-Sunset",
+        "Sunday": "Sunrise-Sunset"
+    },
+    "16": {
+        "id number": 16,
+        "title": "frisbee golf",
+        "conditions": "Dry",
+        "coordinate": "36.9912,-122.0539",
+        "address": "East Remote Parking Lot Santa Cruz, CA 95064",
+        "tags": [
+            "Outside",
+            "UCSC"
+        ],
+        "number of people": null,
+        "intensity from 1 to 5": 3,
+        "duration in hr": [
+            1,
+            2
+        ],
+        "time of day": "Sunrise-Sunset",
+        "cost in USD": [
+            0
+        ],
+        "description": "If you're fed up with aliens monopolizing the flying saucer market, toss around a few of your own while admiring the views from the UCSC campus",
+        "links": [
+            "https://udisc.com/courses/u-c-santa-cruz-vV0g"
+        ],
+        "photo": "https://d22ksth68ujgu2.cloudfront.net/f2a5eb3512d717380840b875801a623d_m_ZTzR1LhBwH5ZDsHbCueDO4FGboxJ.jpg",
+        "potential reward": "Frisbee",
+        "what to bring": [
+            "Frisbees",
+            "Water"
+        ],
+        "Monday": "Sunrise-Sunset",
+        "Tuesday": "Sunrise-Sunset",
+        "Wensday": "Sunrise-Sunset",
+        "Thursday": "Sunrise-Sunset",
+        "Friday": "Sunrise-Sunset",
+        "Saturday": "Sunrise-Sunset",
+        "Sunday": "Sunrise-Sunset"
+    },
+    "17": {
+        "id number": 17,
+        "title": "dance",
+        "conditions": "Inside",
+        "coordinate": "36.9869637,-122.0348349",
+        "address": "320 Encinal St, Santa Cruz, CA 95060",
+        "tags": [
+            "Inside",
+            "Lesson"
+        ],
+        "number of people": null,
+        "intensity from 1 to 5": 2,
+        "duration in hr": [
+            1,
+            3
+        ],
+        "time of day": "15-19.5,14-19.5,14.5-19.5,14-19.5,14-19.5,10-12,10.5-12.75",
+        "cost in USD": [
+            20,
+            25
+        ],
+        "description": "Experts widly agree dancing with an instructor watching is the next best thing to dancing like no one is watching, so give it a go and learn a few new moves.",
+        "links": [
+            "https://iadance.com/"
+        ],
+        "photo": "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/47681605_2108629492493792_995540274950176768_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=cwT5F9FbrMUAX9yKz6r&_nc_ht=scontent-sjc3-1.xx&oh=00_AfDNdaGe2maL2BMMvU4sJCyMfEnQN28VxpADmz-Pj7TgEw&oe=6406CA98",
+        "potential reward": "ballet slippers",
+        "what to bring": [
+            "Excersiseclothes",
+            "Water"
+        ],
+        "Monday": [
+            15,
+            19.5
+        ],
+        "Tuesday": [
+            14,
+            19.5
+        ],
+        "Wensday": [
+            14.5,
+            19.5
+        ],
+        "Thursday": [
+            14,
+            19.5
+        ],
+        "Friday": [
+            14,
+            19.5
+        ],
+        "Saturday": [
+            10,
+            12
+        ],
+        "Sunday": [
+            10.5,
+            12.75
+        ]
+    },
+    "18": {
+        "id number": 18,
+        "title": "yog-aaaahh my back",
+        "conditions": "Inside ",
+        "coordinate": "36.9590775,-122.0484719",
+        "address": "402 Ingalls St #11, Santa Cruz, CA 95060",
+        "tags": [
+            "Inside",
+            "Lesson"
+        ],
+        "number of people": null,
+        "intensity from 1 to 5": 3,
+        "duration in hr": [
+            1
+        ],
+        "time of day": "9-19",
+        "cost in USD": [
+            20,
+            40
+        ],
+        "description": "Make sure to check the link for exact class schedules. Ironically the start times aren't always flexible",
+        "links": [
+            "https://www.santacruzyoga.net/schedule"
+        ],
+        "photo": "https://images.squarespace-cdn.com/content/v1/59bae3db80bd5e582e4eb4d2/1512692574953-PIQREVR9YFV754UXVSLP/thanksgiving2.jpg",
+        "potential reward": "Yoga Mat",
+        "what to bring": [
+            "ExcersiseClothes",
+            "Water"
+        ],
+        "Monday": [
+            9,
+            19
+        ]
+    },
+    "19": {
+        "id number": 19,
+        "title": "The Fountain of Youth",
+        "conditions": "Dry",
+        "coordinate": "36.9724486,-122.0025412",
+        "address": "168 Frederick St, Santa Cruz, CA 95062",
+        "tags": [
+            "Outside",
+            "Free"
+        ],
+        "number of people": [
+            2
+        ],
+        "intensity from 1 to 5": 2,
+        "duration in hr": [
+            0.5
+        ],
+        "time of day": "22.5-5",
+        "cost in USD": [
+            0
+        ],
+        "description": "Sure everyone says \"these bike trails are like a playground for adults\" or \"climbing is like being a kid again\" but we all know its better to get the real thing. Once the kids have gone home theirs no reason not to unleash your inner child.",
+        "links": [
+            "https://www.cityofsantacruz.com/government/city-departments/parks-recreation/parks-beaches-open-spaces/parks/frederick-street-park"
+        ],
+        "photo": "https://www.cityofsantacruz.com/home/showpublishedimage/13694/636807253116200000",
+        "potential reward": "potion of youth",
+        "what to bring": [
+            "Water",
+            "YouthfulExubrence",
+            "ComfyShoes"
+        ],
+        "Monday": [
+            22.5,
+            5
+        ]
+    },
+    "20": {
+        "id number": 20,
+        "title": "Slackin' Off",
+        "conditions": "Inside",
+        "coordinate": "36.9680396,-122.006511",
+        "address": "104 Bronson St #12, Santa Cruz, CA 95062",
+        "tags": [
+            "Lesson",
+            "Balance",
+            "Inside"
+        ],
+        "number of people": null,
+        "intensity from 1 to 5": 3,
+        "duration in hr": [
+            1
+        ],
+        "time of day": "18.5-19.5",
+        "cost in USD": [
+            20,
+            30
+        ],
+        "description": "Learn the cool adult version of walking along the curb at recess. Available on the 2nd Monday and 4th Wednesday of every month.",
+        "links": [
+            "https://pacificedgeclimbinggym.com/slackline-clinic"
+        ],
+        "photo": "https://cdn.shopify.com/s/files/1/0334/5730/7785/products/eagles-nest-outfitters-inc-lights-accessories-slackwire-slackline-33362653315221_1824x.jpg?v=1640119396",
+        "potential reward": "slackline",
+        "what to bring": [
+            "Water"
+        ],
+        "Monday": [
+            18.5,
+            19.5
+        ]
+    },
+    "21": {
+        "id number": 21,
+        "title": "Cruise the Clouds",
+        "conditions": "Dry",
+        "coordinate": "37.024620,-122.091590\n",
+        "address": "Empire Grade (at Mile 1306), California 95018",
+        "tags": [
+            "Forrest",
+            "UCSC",
+            "Bike",
+            "Outside",
+            "Free"
+        ],
+        "number of people": null,
+        "intensity from 1 to 5": 5,
+        "duration in hr": [
+            1,
+            4
+        ],
+        "time of day": "Sunrise-Sunset",
+        "cost in USD": [
+            0
+        ],
+        "description": "I shouldn't have to sell you on mountain biking trails so good they created two of the largest mountain bike manufacturers...so why are you still here?",
+        "links": [
+            "https://www.alltrails.com/trail/us/california/ucsc-upper-campus-trail"
+        ],
+        "photo": "https://images.singletracks.com/blog/wp-content/uploads/2019/04/ucsc-4-orig.jpg",
+        "potential reward": "bike handelbars",
+        "what to bring": [
+            "Bike",
+            "Bikehelmet",
+            "Layers",
+            "Water",
+            "Snack"
+        ],
+        "Monday": "Sunrise-Sunset",
+        "Tuesday": "Sunrise-Sunset",
+        "Wensday": "Sunrise-Sunset",
+        "Thursday": "Sunrise-Sunset",
+        "Friday": "Sunrise-Sunset",
+        "Saturday": "Sunrise-Sunset",
+        "Sunday": "Sunrise-Sunset"
+    }
+}
