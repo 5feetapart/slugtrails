@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import {LeafletMap, TileLayer} from 'svelte-leafletjs';
+    import {LeafletMap, DivIcon, Marker, TileLayer} from 'svelte-leafletjs';
 	import type {MapOptions} from "leaflet"
 	import { browser } from '$app/environment';
 	export let locations: {
@@ -8,15 +8,20 @@
 		id: string
 	}[] = [
 		{
-			coordinate: "",
-			title: "",
-			id: ""
+			coordinate: "36.964710,-122.042340",
+			title: "Cruise the Coast",
+			id: "1"
+		},
+		{
+			coordinate: "37.024620,-122.091590",
+			title: "Taking the High Road",
+			id: "3"
 		}
 	]
 	import {onMount} from "svelte";
     const mapOptions: MapOptions = {
-        center: [1.250111, 103.830933],
-        zoom: 11,
+        center: [36.9741, 122.0308],
+        zoom: 15,
     };
     const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
     const tileLayerOptions = {
@@ -27,18 +32,25 @@
     };
     let leafletMap: LeafletMap;
     onMount(() => {
-        leafletMap.getMap().fitBounds([[1.266835, 103.796403], [1.232988, 103.854861]]);
-    });
+        leafletMap.getMap().fitBounds([[37.01142816469954, -121.96545931678963], [36.93957288390141, -122.06853517114845]]);
+	});
+
 </script>
 
 <div class="example map">
     <LeafletMap bind:this={leafletMap} options={mapOptions}>
         <TileLayer url={tileUrl} options={tileLayerOptions}/>
+		{#each locations as location}
+			<Marker latLng={[location.coordinate.split(",").map(function(item)]}>
+				<DivIcon>
+					<div style='background-color: #0000ff; color: #fff; width: 40px; border-radius: 50%;'>
+						{location.title}
+					</div>
+				</DivIcon>
+			</Marker>
+		{/each}
     </LeafletMap>
 </div>
-
-
-
 
 
 <style>
