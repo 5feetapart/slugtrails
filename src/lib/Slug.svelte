@@ -11,20 +11,16 @@
 	base_image.src = '/img/background.PNG'
 	slug_image.src = '/img/slug.PNG'
 	base_image.onload = () => {
+		draw_slug()
 		if (!context) return
-		context.drawImage(base_image, 0, 0, window.innerWidth, 450)
 	}
 	slug_image.onload = () => {
+		draw_slug()
 		if (!context) return
-		context.drawImage(slug_image, window.innerWidth / 2 - 100, 80)
 	}
 	function draw_slug() {
 		slug.width = window.innerWidth
 		if (!context) return
-		let base_image = new Image()
-		let slug_image = new Image()
-		base_image.src = '/img/background.PNG'
-		slug_image.src = '/img/slug.PNG'
 		context.drawImage(base_image, 0, 0, window.innerWidth, 450)
 		context.drawImage(slug_image, window.innerWidth / 2 - 100, 80)
 	}
