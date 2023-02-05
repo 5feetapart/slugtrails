@@ -8,8 +8,8 @@ export type Activity = {
 	coordinate: string,
 	address: string,
 	tags: string[],
-	people?: number[],
-	intensity: number
+	people?: number[]|number,
+	intensity: number,
 	cost: number[],
 	description: string,
 	links: string[],
@@ -28,7 +28,7 @@ export type Activity = {
 
 async function jsonToActivityArray(path: string): Activity[] {
 	let json = await fetch(path);
-	buildout json to activity Array, litterally return json
+	
 }
 
 export const activities = readable<Activity[]>(undefined, (set) => {
