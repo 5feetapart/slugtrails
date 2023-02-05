@@ -9,15 +9,15 @@
 </script>
 
 <div class="contain">
-<Slug />
+	<Slug />
 
-<div class="wrapper">
-	<button>Journal</button>
+	<div class="wrapper">
+		<button>Journal</button>
 
-	<Favorites />
+		<Favorites />
 
-	<Stats />
-</div>
+		<Stats />
+	</div>
 </div>
 
 <style>
@@ -39,7 +39,8 @@
 		padding: var(--gap-3);
 	}
 
-	.contain{
-		max-width:var(--page-width);
+	.contain {
+		max-width: var(--page-width);
+		margin: 0 auto;
 	}
 </style>

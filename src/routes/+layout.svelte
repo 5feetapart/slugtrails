@@ -26,6 +26,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin-top: var(--gap-3);
 	}
 	:global(.spinner-parent > *) {
 		width: 50px;
