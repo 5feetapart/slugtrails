@@ -179,14 +179,10 @@ export default function addMoreEvents(elem: HTMLElement) {
 				})
 				distAtDown = dist
 			} else if (pointersDownCt == 1) {
-				const panEvent = new CustomEvent('ppan', {
-					detail: {
-						...pointerDict,
-						fromPointer: true
-					}
+				dispatch('ppan', {
+					...pointerDict,
+					fromPointer: true
 				})
-				dispatch('ppan', pointerDict)
-				elem.dispatchEvent(panEvent)
 			}
 		}
 	})
@@ -199,14 +195,11 @@ export default function addMoreEvents(elem: HTMLElement) {
 				let event = e as WEvent
 
 				addRelativePos(event)
-				const zoomEvent = new CustomEvent('zoom', {
-					detail: {
-						scaleAmount: e.deltaY > 0 ? (1 - e.deltaY * 0.01) / 1 : 1 / (1 + 0.01 * e.deltaY),
-						relativeX: event.relativeX,
-						relativeY: event.relativeY
-					}
+				dispatch('zoom', {
+					scaleAmount: e.deltaY > 0 ? (1 - e.deltaY * 0.01) / 1 : 1 / (1 + 0.01 * e.deltaY),
+					relativeX: event.relativeX,
+					relativeY: event.relativeY
 				})
-				elem.dispatchEvent(zoomEvent)
 			} else {
 				const startPanEvent = new CustomEvent('ppanstart', {
 					detail: {
@@ -214,6 +207,12 @@ export default function addMoreEvents(elem: HTMLElement) {
 						relativeY: 0
 					}
 				})
+				const pointerEvent = new PointerEvent('pointerdown', {
+					clientX: e.clientX,
+					clientY: e.clientY
+				}) as PEvent
+				addRelativePos(pointerEvent as PEvent)
+				dispatch('ppanstart', pointerEvent)
 				elem.dispatchEvent(startPanEvent)
 				const panEvent = new CustomEvent('ppan', {
 					detail: {
@@ -223,7 +222,12 @@ export default function addMoreEvents(elem: HTMLElement) {
 						downY: 0
 					}
 				})
-				elem.dispatchEvent(panEvent)
+				const pointerEvent2 = new PointerEvent('pointermove', {
+					clientX: e.clientX + e.deltaX,
+					clientY: e.clientY + e.deltaY
+				}) as PanEvent
+				addRelativePos(pointerEvent2 as PEvent)
+				dispatch('ppan', { ...pointerEvent2, fromPointer: true })
 			}
 		},
 		{ passive: false }
