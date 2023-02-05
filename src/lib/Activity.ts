@@ -18,7 +18,7 @@ export type Activity = {
 	bring: string[],
 	Monday?: number[],
 	Tuesday?: number[],
-	Wensday?: number[],
+	Wednesday?: number[],
 	Thursday?: number[],
 	Friday?: number[],
 	Saturday?: number[],
@@ -28,7 +28,7 @@ export type Activity = {
 
 async function jsonToActivityArray(path: string): Activity[] {
 	let json = await fetch(path);
-	
+
 }
 
 export const activities = readable<Activity[]>(undefined, (set) => {
