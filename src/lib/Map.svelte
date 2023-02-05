@@ -1,14 +1,53 @@
-<script>
-    let map: HTMLElement
+<script lang='ts'>
+    import {LeafletMap, TileLayer} from 'svelte-leafletjs';
+	import type {MapOptions} from "leaflet"
+	import { browser } from '$app/environment';
+	export let locations: {
+		coordinate: string,
+		title: string,
+		id: string
+	}[] = [
+		{
+			coordinate: "",
+			title: "",
+			id: ""
+		}
+	]
+
+
+	const mapOptions: MapOptions = {
+        center: [1.364917, 103.822872],
+        zoom: 11,
+    };
+    const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+    const tileLayerOptions = {
+        minZoom: 0,
+        maxZoom: 20,
+        maxNativeZoom: 19,
+        attribution: "© OpenStreetMap contributors",
+    };
+
+
+
+
+    let map: LeafletMap
 </script>
 
-<div class="map" bind:this={map}>NAYAN PUT MAP HERE</div>
+<div class="map">
+    <LeafletMap bind:this={map} options={mapOptions}>
+        <TileLayer url={tileUrl} options={tileLayerOptions}/>
+    </LeafletMap>
+</div>
 
-<script>
+
+
+
+<style>
     .map {
 		width: 350px;
 		height: 300px;
 		border: var(--clr-green-500) solid var(--gap-1);
 		margin: var(--gap-2);
+		overflow:hidden;
 	}
-</script>
+</style>
