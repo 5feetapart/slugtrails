@@ -17,6 +17,11 @@ type PEvent = PointerEvent & {
 	downY: number
 }
 
+type WEvent = WheelEvent & {
+	relativeX: number
+	relativeY: number
+}
+
 export default function addMoreEvents(elem: HTMLElement) {
 	let isDown = false,
 		pointersDown: { [id: number]: PEvent } = {},
@@ -140,14 +145,15 @@ export default function addMoreEvents(elem: HTMLElement) {
 
 	elem.addEventListener('pointerout', onUp)
 	elem.addEventListener('pointermove', (e: PointerEvent) => {
-		const pointerDict = pointersDown[e.pointerId]
-		if (!pointerDict) {
+		let pointerDict = pointersDown[e.pointerId]
+		if (!pointerDict || !distAtDown) {
 			return
 		}
 		addRelativePos(e as PEvent)
-		for (let key in e as PEvent) {
-			pointerDict[key] = e[key]
+		pointersDown[e.pointerId] = {
+			...(e as PEvent)
 		}
+		pointerDict = pointersDown[e.pointerId]
 		if (isDown) {
 			const pmoveEvent = new CustomEvent('pmove', {
 				detail: {
@@ -157,7 +163,7 @@ export default function addMoreEvents(elem: HTMLElement) {
 			elem.dispatchEvent(pmoveEvent)
 
 			if (pointersDownCt == 2) {
-				const keys = Object.keys(pointersDown)
+				const keys = Object.keys(pointersDown).map((key) => parseInt(key))
 				const p1 = pointersDown[keys[0]],
 					p2 = pointersDown[keys[1]]
 				const dist = Math.sqrt(
@@ -193,7 +199,7 @@ export default function addMoreEvents(elem: HTMLElement) {
 
 	elem.addEventListener(
 		'wheel',
-		(e) => {
+		(e: WheelEvent) => {
 			e.preventDefault()
 			if (e.ctrlKey) {
 				addRelativePos(e)

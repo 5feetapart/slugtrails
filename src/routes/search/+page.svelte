@@ -1,5 +1,5 @@
 <script>
-	import SearchBar from '$lib/SearchBar.svelte';
+	import SearchBar from '$lib/SearchBar.svelte'
 </script>
 
 <div>

@@ -4,7 +4,7 @@
 	import '../global.css'
 	import SignIn from '$lib/SignIn.svelte'
 	import { userData } from '$stores/userData'
-	import Spinner from '$lib/Spinner.svelte';
+	import Spinner from '$lib/Spinner.svelte'
 </script>
 
 <Nav />
@@ -13,9 +13,9 @@
 	{#if $userData === null}
 		<SignIn />
 	{:else if $userData === undefined}
-	<div class="spinner-parent">
-		<Spinner />
-	  </div>
+		<div class="spinner-parent">
+			<Spinner />
+		</div>
 	{:else}
 		<slot />
 	{/if}
