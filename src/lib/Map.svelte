@@ -8,9 +8,9 @@
 		id: string
 	}[] = [
 		{
-			coordinate: "36.964710,-122.042340",
-			title: "Cruise the Coast",
-			id: "1"
+			coordinate: "36.962860,-122.000120",
+			title: "Waterboarding for Fun and Profit",
+			id: "2"
 		},
 		{
 			coordinate: "37.024620,-122.091590",
@@ -32,7 +32,7 @@
     };
     let leafletMap: LeafletMap;
     onMount(() => {
-        leafletMap.getMap().fitBounds([[37.01142816469954, -121.96545931678963], [36.93957288390141, -122.06853517114845]]);
+        leafletMap.getMap().fitBounds([[37.0404645771983, -122.14911178881417], [36.886437403855844, -121.92909839571384]]);
 	});
 
 	function latLngFromString(coord: string) {
@@ -48,7 +48,7 @@
 			<Marker latLng={latLngFromString(location.coordinate)}>
 				<DivIcon>
 					<div class="marker">
-						{index}
+						{index+1}
 					</div>
 				</DivIcon>
 			</Marker>
