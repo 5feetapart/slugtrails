@@ -1,6 +1,6 @@
 <script lang='ts'>
     import {LeafletMap, DivIcon, Marker, TileLayer} from 'svelte-leafletjs';
-	import type {MapOptions} from "leaflet"
+	import type {LatLngExpression, MapOptions} from "leaflet"
 	import { browser } from '$app/environment';
 	export let locations: {
 		coordinate: string,
@@ -35,16 +35,20 @@
         leafletMap.getMap().fitBounds([[37.01142816469954, -121.96545931678963], [36.93957288390141, -122.06853517114845]]);
 	});
 
+	function latLngFromString(coord: string) {
+		return coord.split(",").map(parseFloat) as LatLngExpression
+	}
+
 </script>
 
 <div class="example map">
     <LeafletMap bind:this={leafletMap} options={mapOptions}>
         <TileLayer url={tileUrl} options={tileLayerOptions}/>
-		{#each locations as location}
-			<Marker latLng={[location.coordinate.split(",").map(function(item)]}>
+		{#each locations as location, index}
+			<Marker latLng={latLngFromString(location.coordinate)}>
 				<DivIcon>
-					<div style='background-color: #0000ff; color: #fff; width: 40px; border-radius: 50%;'>
-						{location.title}
+					<div class="marker">
+						{index}
 					</div>
 				</DivIcon>
 			</Marker>
@@ -60,5 +64,22 @@
 		border: var(--clr-green-500) solid var(--gap-1);
 		margin: var(--gap-2);
 		overflow:hidden;
+	}
+
+	.marker {
+		background-color: var(--clr-green-700);
+		aspect-ratio: 1 / 1;
+		width: 2rem;
+		border-radius: 50%;
+		color: black;
+		font-weight: bold;
+		font-size: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	:global(.leaflet-marker-icon) {
+		background-color: transparent;
+		border: none;
 	}
 </style>
