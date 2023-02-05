@@ -4,7 +4,7 @@
 	import Activity from '$lib/Activity.svelte'
 	export let data: PageData
 
-	$: activity = $activities[parseInt(data.id)]
+	$: activity = $activities ? $activities[parseInt(data.id)] : undefined
 </script>
 
 {#if activity}

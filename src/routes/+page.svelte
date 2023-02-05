@@ -12,11 +12,7 @@
 	<Slug />
 
 	<div class="wrapper">
-		<button>Journal</button>
-
-		<Favorites />
-
-		<Stats />
+		<a href="/activities"> View Activities</a>
 	</div>
 </div>
 
