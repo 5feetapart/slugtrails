@@ -318,7 +318,7 @@
         "cost in USD": [
             0
         ],
-        "description": "If world class surfing and paddleboarding havn't convinced you of Santa Cruz's skills with boards it's time to try out skateboarding. There's a reason skating's oldest continuos company is named after our humble town ;)",
+        "description": "If world class surfing and paddleboarding havn't convinced you of Santa Cruz's skills with boards it's time to try out skateboarding. There's a reason skating's oldest continuos company is named after our humble town. When in Rome right?",
         "links": [
             "https://goo.gl/maps/QYZCyxLbKgVDUiQg9"
         ],
@@ -511,7 +511,7 @@
     },
     "13": {
         "id number": 13,
-        "title": "Basketball",
+        "title": "See you at Court",
         "conditions": "Dry",
         "coordinate": "36.969555, -122.028430",
         "address": "322 Maple St, Santa Cruz, CA 95060",
@@ -569,7 +569,7 @@
         "cost in USD": [
             0
         ],
-        "description": "Make sure to check the hours before going.",
+        "description": "An ideal middle ground between that one puddle in the parking lot and the violent Pacific Ocean, swimming at this pool makes for a great workout. Make sure to check the website for hours before heading out.",
         "links": [
             "https://recreation.ucsc.edu/aquatics/index.html"
         ],
@@ -628,7 +628,7 @@
     },
     "16": {
         "id number": 16,
-        "title": "frisbee golf",
+        "title": "Re-disc-ulous fun",
         "conditions": "Dry",
         "coordinate": "36.9912,-122.0539",
         "address": "East Remote Parking Lot Santa Cruz, CA 95064",
@@ -666,7 +666,7 @@
     },
     "17": {
         "id number": 17,
-        "title": "dance",
+        "title": "Straight to the Pointe",
         "conditions": "Inside",
         "coordinate": "36.9869637,-122.0348349",
         "address": "320 Encinal St, Santa Cruz, CA 95060",
@@ -726,7 +726,7 @@
     },
     "18": {
         "id number": 18,
-        "title": "yog-aaaahh my back",
+        "title": "Yog-aaaahh my back",
         "conditions": "Inside ",
         "coordinate": "36.9590775,-122.0484719",
         "address": "402 Ingalls St #11, Santa Cruz, CA 95060",
