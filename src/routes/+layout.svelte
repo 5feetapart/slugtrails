@@ -22,10 +22,6 @@
 </main>
 
 <style>
-	main {
-		max-width: var(--page-width);
-		margin: var(--gap-2) auto;
-	}
 	.spinner-parent {
 		display: flex;
 		justify-content: center;
