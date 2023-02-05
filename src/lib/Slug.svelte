@@ -22,7 +22,7 @@
 		slug.width = window.innerWidth
 		if (!context) return
 		context.drawImage(base_image, 0, 0, window.innerWidth, 450)
-		context.drawImage(slug_image, window.innerWidth / 2 - 100, 80)
+		context.drawImage(slug_image, window.innerWidth / 2 - 100, 80, 200, 300)
 	}
 
 	$: context && draw_slug()

@@ -42,7 +42,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		max-width: var(--page-width);
 		margin: 0 auto;
 		padding: var(--gap-2);
 		background-color: var(--clr-pink-700);
