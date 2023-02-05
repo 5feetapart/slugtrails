@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths'
 	import { draw } from 'svelte/transition'
-	export let items: string[] = []
+	export let items: string[] = ['battery', 'disco ball', 'skateboard']
 	let slug: HTMLCanvasElement
 	$: context = slug ? slug.getContext('2d') : null
 
